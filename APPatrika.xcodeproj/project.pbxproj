@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BA7877C8A9BC64D215191DF /* Pods_APPatrika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC66AA9F5422EED3E996FA7 /* Pods_APPatrika.framework */; };
+		95ED70FC2372BC5BD052E22C /* Pods_APPatrikaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A227F34E547D520F114CF5 /* Pods_APPatrikaTests.framework */; };
+		AFFCC3F4D9C692C0489A4183 /* Pods_APPatrika_APPatrikaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA83827955EEDF920ACF9EF /* Pods_APPatrika_APPatrikaUITests.framework */; };
 		B2EE3B8C269CF776001B9BA6 /* APPatrikaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE3B8B269CF776001B9BA6 /* APPatrikaApp.swift */; };
 		B2EE3B8E269CF776001B9BA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE3B8D269CF776001B9BA6 /* ContentView.swift */; };
 		B2EE3B90269CF777001B9BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EE3B8F269CF777001B9BA6 /* Assets.xcassets */; };
@@ -33,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2EAEDA8779FD3AA692651FDF /* Pods-APPatrikaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrikaTests.release.xcconfig"; path = "Target Support Files/Pods-APPatrikaTests/Pods-APPatrikaTests.release.xcconfig"; sourceTree = "<group>"; };
+		78E4003E4BFB76101FA82902 /* Pods-APPatrika-APPatrikaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrika-APPatrikaUITests.release.xcconfig"; path = "Target Support Files/Pods-APPatrika-APPatrikaUITests/Pods-APPatrika-APPatrikaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7CC66AA9F5422EED3E996FA7 /* Pods_APPatrika.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APPatrika.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F0703CA51C713FAB6C9BA5D /* Pods-APPatrika-APPatrikaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrika-APPatrikaUITests.debug.xcconfig"; path = "Target Support Files/Pods-APPatrika-APPatrikaUITests/Pods-APPatrika-APPatrikaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		81A227F34E547D520F114CF5 /* Pods_APPatrikaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APPatrikaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABA83827955EEDF920ACF9EF /* Pods_APPatrika_APPatrikaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_APPatrika_APPatrikaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EE3B88269CF776001B9BA6 /* APPatrika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPatrika.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EE3B8B269CF776001B9BA6 /* APPatrikaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPatrikaApp.swift; sourceTree = "<group>"; };
 		B2EE3B8D269CF776001B9BA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +54,9 @@
 		B2EE3BA4269CF778001B9BA6 /* APPatrikaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = APPatrikaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2EE3BA8269CF778001B9BA6 /* APPatrikaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPatrikaUITests.swift; sourceTree = "<group>"; };
 		B2EE3BAA269CF778001B9BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1BBACCEFC8CC1D8D6F27201 /* Pods-APPatrika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrika.release.xcconfig"; path = "Target Support Files/Pods-APPatrika/Pods-APPatrika.release.xcconfig"; sourceTree = "<group>"; };
+		CBA2958B0D31CC59A1DC4A1F /* Pods-APPatrika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrika.debug.xcconfig"; path = "Target Support Files/Pods-APPatrika/Pods-APPatrika.debug.xcconfig"; sourceTree = "<group>"; };
+		E3639203BC6E333F5CAD5C38 /* Pods-APPatrikaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrikaTests.debug.xcconfig"; path = "Target Support Files/Pods-APPatrikaTests/Pods-APPatrikaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA7877C8A9BC64D215191DF /* Pods_APPatrika.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95ED70FC2372BC5BD052E22C /* Pods_APPatrikaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFCC3F4D9C692C0489A4183 /* Pods_APPatrika_APPatrikaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +94,8 @@
 				B2EE3B9C269CF778001B9BA6 /* APPatrikaTests */,
 				B2EE3BA7269CF778001B9BA6 /* APPatrikaUITests */,
 				B2EE3B89269CF776001B9BA6 /* Products */,
+				D62DA0D53C0B6B1E9C03C95C /* Pods */,
+				D9DBEB3B643E97A3B686BF82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +147,30 @@
 			path = APPatrikaUITests;
 			sourceTree = "<group>";
 		};
+		D62DA0D53C0B6B1E9C03C95C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CBA2958B0D31CC59A1DC4A1F /* Pods-APPatrika.debug.xcconfig */,
+				C1BBACCEFC8CC1D8D6F27201 /* Pods-APPatrika.release.xcconfig */,
+				7F0703CA51C713FAB6C9BA5D /* Pods-APPatrika-APPatrikaUITests.debug.xcconfig */,
+				78E4003E4BFB76101FA82902 /* Pods-APPatrika-APPatrikaUITests.release.xcconfig */,
+				E3639203BC6E333F5CAD5C38 /* Pods-APPatrikaTests.debug.xcconfig */,
+				2EAEDA8779FD3AA692651FDF /* Pods-APPatrikaTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D9DBEB3B643E97A3B686BF82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CC66AA9F5422EED3E996FA7 /* Pods_APPatrika.framework */,
+				ABA83827955EEDF920ACF9EF /* Pods_APPatrika_APPatrikaUITests.framework */,
+				81A227F34E547D520F114CF5 /* Pods_APPatrikaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +178,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2EE3BAD269CF778001B9BA6 /* Build configuration list for PBXNativeTarget "APPatrika" */;
 			buildPhases = (
+				8104F798562F50AB863CFEC3 /* [CP] Check Pods Manifest.lock */,
 				B2EE3B84269CF776001B9BA6 /* Sources */,
 				B2EE3B85269CF776001B9BA6 /* Frameworks */,
 				B2EE3B86269CF776001B9BA6 /* Resources */,
@@ -154,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2EE3BB0269CF778001B9BA6 /* Build configuration list for PBXNativeTarget "APPatrikaTests" */;
 			buildPhases = (
+				95B81807E94986FFB7778859 /* [CP] Check Pods Manifest.lock */,
 				B2EE3B95269CF778001B9BA6 /* Sources */,
 				B2EE3B96269CF778001B9BA6 /* Frameworks */,
 				B2EE3B97269CF778001B9BA6 /* Resources */,
@@ -172,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2EE3BB3269CF778001B9BA6 /* Build configuration list for PBXNativeTarget "APPatrikaUITests" */;
 			buildPhases = (
+				DF13D8F117369FF754CE314A /* [CP] Check Pods Manifest.lock */,
 				B2EE3BA0269CF778001B9BA6 /* Sources */,
 				B2EE3BA1269CF778001B9BA6 /* Frameworks */,
 				B2EE3BA2269CF778001B9BA6 /* Resources */,
@@ -253,6 +297,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8104F798562F50AB863CFEC3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APPatrika-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95B81807E94986FFB7778859 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APPatrikaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF13D8F117369FF754CE314A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-APPatrika-APPatrikaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B2EE3B84269CF776001B9BA6 /* Sources */ = {
@@ -414,6 +527,7 @@
 		};
 		B2EE3BAE269CF778001B9BA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBA2958B0D31CC59A1DC4A1F /* Pods-APPatrika.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -436,6 +550,7 @@
 		};
 		B2EE3BAF269CF778001B9BA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1BBACCEFC8CC1D8D6F27201 /* Pods-APPatrika.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -458,6 +573,7 @@
 		};
 		B2EE3BB1269CF778001B9BA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3639203BC6E333F5CAD5C38 /* Pods-APPatrikaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +596,7 @@
 		};
 		B2EE3BB2269CF778001B9BA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2EAEDA8779FD3AA692651FDF /* Pods-APPatrikaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -502,6 +619,7 @@
 		};
 		B2EE3BB4269CF778001B9BA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F0703CA51C713FAB6C9BA5D /* Pods-APPatrika-APPatrikaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -522,6 +640,7 @@
 		};
 		B2EE3BB5269CF778001B9BA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E4003E4BFB76101FA82902 /* Pods-APPatrika-APPatrikaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

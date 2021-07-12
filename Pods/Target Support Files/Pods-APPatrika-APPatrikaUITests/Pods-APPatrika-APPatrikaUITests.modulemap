@@ -1,0 +1,6 @@
+framework module Pods_APPatrika_APPatrikaUITests {
+  umbrella header "Pods-APPatrika-APPatrikaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
