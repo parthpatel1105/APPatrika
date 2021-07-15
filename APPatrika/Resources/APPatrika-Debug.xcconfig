@@ -1,0 +1,10 @@
+//
+//  APPatrika-Debug.xcconfig
+//  APPatrika
+//
+//  Created by Parth Patel on 14/07/21.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+ConfigEnvironment=Debug

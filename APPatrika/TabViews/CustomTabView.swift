@@ -19,7 +19,7 @@ struct CustomTabView: View {
             
             //1
             NavigationView {
-                PatrikaView()
+                ArticleView()
                     .navigationBarTitle("Patrika")
             }
             .tabItem {
