@@ -146,7 +146,6 @@
 		B202B8E7269F3D34001F8A04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B22225D226A08B81004CBC94 /* Views */,
 				B202B911269F7380001F8A04 /* ArticlesModel.swift */,
 			);
 			path = Models;
@@ -198,58 +197,58 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		B22225D226A08B81004CBC94 /* Views */ = {
+		B22225D226A08B81004CBC94 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B22225D726A08BCB004CBC94 /* Info View */,
-				B22225D626A08BBF004CBC94 /* History View */,
-				B22225D526A08BAC004CBC94 /* BalPatrika View */,
-				B22225D426A08B9E004CBC94 /* OutReach View */,
-				B22225D326A08B89004CBC94 /* Article View */,
+				B22225D726A08BCB004CBC94 /* InfoView */,
+				B22225D626A08BBF004CBC94 /* HistoryView */,
+				B22225D526A08BAC004CBC94 /* BalPatrikaView */,
+				B22225D426A08B9E004CBC94 /* OutReachView */,
+				B22225D326A08B89004CBC94 /* ArticleView */,
 			);
-			path = Views;
+			path = Screens;
 			sourceTree = "<group>";
 		};
-		B22225D326A08B89004CBC94 /* Article View */ = {
+		B22225D326A08B89004CBC94 /* ArticleView */ = {
 			isa = PBXGroup;
 			children = (
 				B2EE3BC1269CFA48001B9BA6 /* ArticleView.swift */,
 				B202B91A269F7E1C001F8A04 /* ArticleListCell.swift */,
 				B202B915269F78CB001F8A04 /* ArticleViewModel.swift */,
 			);
-			path = "Article View";
+			path = ArticleView;
 			sourceTree = "<group>";
 		};
-		B22225D426A08B9E004CBC94 /* OutReach View */ = {
+		B22225D426A08B9E004CBC94 /* OutReachView */ = {
 			isa = PBXGroup;
 			children = (
 				B2EE3BB9269CF8F8001B9BA6 /* OutReachView.swift */,
 			);
-			path = "OutReach View";
+			path = OutReachView;
 			sourceTree = "<group>";
 		};
-		B22225D526A08BAC004CBC94 /* BalPatrika View */ = {
+		B22225D526A08BAC004CBC94 /* BalPatrikaView */ = {
 			isa = PBXGroup;
 			children = (
 				B2EE3BBB269CF908001B9BA6 /* BalPatrikaView.swift */,
 			);
-			path = "BalPatrika View";
+			path = BalPatrikaView;
 			sourceTree = "<group>";
 		};
-		B22225D626A08BBF004CBC94 /* History View */ = {
+		B22225D626A08BBF004CBC94 /* HistoryView */ = {
 			isa = PBXGroup;
 			children = (
 				B2EE3BBD269CF92D001B9BA6 /* HistoryView.swift */,
 			);
-			path = "History View";
+			path = HistoryView;
 			sourceTree = "<group>";
 		};
-		B22225D726A08BCB004CBC94 /* Info View */ = {
+		B22225D726A08BCB004CBC94 /* InfoView */ = {
 			isa = PBXGroup;
 			children = (
 				B2EE3BBF269CF93C001B9BA6 /* InfoView.swift */,
 			);
-			path = "Info View";
+			path = InfoView;
 			sourceTree = "<group>";
 		};
 		B22225D826A08C32004CBC94 /* Resources */ = {
@@ -257,7 +256,7 @@
 			children = (
 				B202B8EA269F6FC0001F8A04 /* APPatrika-Debug.xcconfig */,
 				B202B8EB269F6FCF001F8A04 /* APPatrika-Release.xcconfig */,
-				B2EE3B94269CF777001B9BA6 /* Info.plist */,
+				B202B8F3269F713B001F8A04 /* config.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,11 +290,12 @@
 				B202B8F5269F72F2001F8A04 /* Services */,
 				B202B8EC269F70BF001F8A04 /* Utils */,
 				B202B8E7269F3D34001F8A04 /* Models */,
+				B22225D226A08B81004CBC94 /* Screens */,
 				B2EE3BB8269CF8C9001B9BA6 /* TabViews */,
 				B22225D826A08C32004CBC94 /* Resources */,
 				B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */,
 				B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */,
-				B202B8F3269F713B001F8A04 /* config.plist */,
+				B2EE3B94269CF777001B9BA6 /* Info.plist */,
 				B2EE3B8F269CF777001B9BA6 /* Assets.xcassets */,
 				B2EE3B91269CF777001B9BA6 /* Preview Content */,
 			);
