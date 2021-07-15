@@ -12,24 +12,17 @@ struct ArticleListCell: View {
     
     var body: some View {
         HStack {
-            Image("")
+            ArticleRemoteImage(urlString: "\(article.id)/" + article.issueImage)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 120, height: 90)
-                .cornerRadius(8)
-                .foregroundColor(.red)
+                .frame(width: 70, height: 70)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(article.issueName)
-                    .font(.headline)
-                    .fontWeight(.medium)
-                
+                    .font(.system(size: 20))
+                    .fontWeight(.regular)
                 Text(article.newImageName)
-                    .font(.footnote)
+                    .font(.subheadline)
                     .fontWeight(.light)
-
-//                Text("$\(article.price, specifier: "%.2f")")
-//                    .foregroundColor(.secondary)
-//                    .fontWeight(.semibold)
             }
             .padding(.leading)
         }

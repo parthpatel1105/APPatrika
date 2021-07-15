@@ -41,6 +41,10 @@ extension EnvironmentConfiguration {
         return config["BaseAPIURL"] as! String
     }
     
+    var imageURL : String {
+        return config["ImageURL"] as! String
+    }
+    
     var logLevel : String {
         return config["LogLevel"] as! String
     }
@@ -61,6 +65,7 @@ extension EnvironmentConfiguration {
 
 protocol NSScreencastConfiguration {
     var baseApiUrl: String { get }
+    var imageURL: String { get }
     var logLevel: String { get }
     var googleClientId: String { get }
     var oneSignalAppId: String { get }

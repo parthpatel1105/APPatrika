@@ -6,11 +6,15 @@
 	<dict>
 		<key>BaseAPIURL</key>
 		<string>http://168.63.234.13/dbphp</string>
+		<key>ImageURL</key>
+		<string>http://168.63.234.13/apppatrika/App_Storage</string>
 	</dict>
 	<key>Debug</key>
 	<dict>
 		<key>BaseAPIURL</key>
 		<string>http://168.63.234.13/dbphp</string>
+		<key>ImageURL</key>
+		<string>http://168.63.234.13/apppatrika/App_Storage</string>
 	</dict>
 </dict>
 </plist>

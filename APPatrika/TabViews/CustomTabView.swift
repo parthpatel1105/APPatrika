@@ -18,10 +18,7 @@ struct CustomTabView: View {
         TabView {
             
             //1
-            NavigationView {
-                ArticleView()
-                    .navigationBarTitle("Patrika")
-            }
+            ArticleListView()
             .tabItem {
                 Text("Patrika")
                 Image(systemName: "book")
@@ -29,10 +26,7 @@ struct CustomTabView: View {
             .tag(0)
             
             //2
-            NavigationView {
-                OutReachView()
-                    .navigationBarTitle("Out Reach")
-            }
+            OutReachView()
             .tabItem {
                 Text("Out Reach")
                 Image(systemName: "books.vertical")
@@ -40,10 +34,7 @@ struct CustomTabView: View {
             .tag(1)
             
             //3
-            NavigationView {
-                BalPatrikaView()
-                    .navigationBarTitle("Bal Patrika")
-            }
+            BalPatrikaView()
             .tabItem {
                 Text("Bal Patrika")
                 Image(systemName: "person")
@@ -51,10 +42,7 @@ struct CustomTabView: View {
             .tag(2)
             
             //4
-            NavigationView {
-                HistoryView()
-                    .navigationBarTitle("History")
-            }
+            HistoryView()
             .tabItem {
                 Text("History")
                 Image(systemName: "folder")
@@ -62,10 +50,7 @@ struct CustomTabView: View {
             .tag(3)
             
             //5
-            NavigationView {
-                InfoView()
-                    .navigationBarTitle("Info")
-            }
+            InfoView()
             .tabItem {
                 Text("Info")
                 Image(systemName: "info.circle")
