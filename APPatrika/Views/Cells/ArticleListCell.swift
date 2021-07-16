@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ArticleListCell: View {
-    let article: Articles
+    let article: ArticlesModel
     
     var body: some View {
         HStack {
@@ -20,7 +20,7 @@ struct ArticleListCell: View {
                 Text(article.issueName)
                     .font(.system(size: 20))
                     .fontWeight(.regular)
-                Text(article.newImageName)
+                Text(article.issueDate)
                     .font(.subheadline)
                     .fontWeight(.light)
             }

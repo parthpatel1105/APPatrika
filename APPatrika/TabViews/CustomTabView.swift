@@ -16,7 +16,6 @@ struct CustomTabView: View {
     // MARK: - Body
     var body: some View {
         TabView {
-            
             //1
             ArticleListView()
             .tabItem {

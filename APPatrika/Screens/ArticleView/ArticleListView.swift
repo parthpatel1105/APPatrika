@@ -21,7 +21,7 @@ struct ArticleListView: View {
                 .navigationBarItems(
                     trailing:
                         Button(action: {
-                            
+                            viewModel.getArticles()
                         }) {
                             Image(systemName: "arrow.clockwise")
                         }
@@ -31,14 +31,11 @@ struct ArticleListView: View {
                 viewModel.getArticles()
             }
                         
-            
             if viewModel.isLoading {
                 LoadingView()
             }
         }
-        .alert(item: $viewModel.alertItem) { alertItem in
-            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
-        }
+        .alert(item: $viewModel.alertType) { $0.alert }
         
     }
 }

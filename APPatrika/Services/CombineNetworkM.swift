@@ -9,18 +9,18 @@ import Foundation
 import Combine
 
 enum DataLoader {
-    static func loadStores(from url: URL) -> AnyPublisher<[Articles], Error> {
+    static func loadStores(from url: URL) -> AnyPublisher<[ArticlesModel], Error> {
         URLSession.shared.dataTaskPublisher(for: url)
             .receive(on: RunLoop.main)
             .map({ $0.data })
-            .decode(type: [Articles].self, decoder: JSONDecoder())
+            .decode(type: [ArticlesModel].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
 }
 
 class DataManager: ObservableObject {
     @Published
-    private(set) var appleStores = [Articles]()
+    private(set) var appleStores = [ArticlesModel]()
     
     private var token: Cancellable?
     

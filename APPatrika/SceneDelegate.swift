@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         let tabView = CustomTabView()
+            .captionBackgroundColor(.yellow)
         let config = EnvironmentConfiguration()
         print("Base API URL = \(config.baseApiUrl)")
 

@@ -9,13 +9,13 @@ import SwiftUI
 
 final class ArticleListViewModel: ObservableObject {
     
-    @Published var articles: [Articles] = []
-    @Published var alertItem: AlertItem?
+    @Published var articles: [ArticlesModel] = []
+    @Published var alertType: AlertType? = nil
     @Published var isLoading = false
     
     func getArticles() {
         isLoading = true
-        NetworkManager.shared.fetchAPI(request: APIEndpoint.getArticle.getURLRequest()) { [weak self] (result: Result<[Articles], ErrorMessage>) in
+        NetworkManager.shared.fetchAPI(request: APIEndpoint.getArticle.getURLRequest()) { [weak self] (result: Result<[ArticlesModel], ErrorMessage>) in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.isLoading = false
@@ -24,19 +24,23 @@ final class ArticleListViewModel: ObservableObject {
                     self.articles = articles
                 case .failure(let error):
                     Logger.log(error.localizedDescription)
-                    switch error {
-                    case .invalidResponse:
-                        self.alertItem = AlertContext.invalidResponse
-                    case .invalidData:
-                        self.alertItem = AlertContext.invalidData
-                    case .unableToComplete:
-                        self.alertItem = AlertContext.unableToComplete
-                    case .invalidURL:
-                        self.alertItem = AlertContext.invalidURL
-                    }
+                    self.showError(error: error)
                 }
             }
             
+        }
+    }
+    
+    private func showError(error: ErrorMessage) {
+        switch error {
+        case .invalidResponse:
+            self.alertType = .ok(title: "Server Error", message: "Invalid response from the server. Please try again later or contact support.")
+        case .invalidData:
+            self.alertType = .ok(title: "Server Error", message: "The data received from the server was invalid. Please contact support.")
+        case .unableToComplete:
+            self.alertType = .ok(title: "Server Error", message: "Unable to complete your request at this time. Please check your internet connection.")
+        case .invalidURL:
+            self.alertType = .ok(title: "Server Error", message: "There was an issue connecting to the server. If this persists, please contact support.")
         }
     }
 }
