@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct BalPatrikaModel: Codable {
-  let bPID: Int
-  let bPDate: String
-  let bPTitle: String
-  let bPFile: String
-
-  private enum CodingKeys: String, CodingKey {
-    case bPID = "BPId"
-    case bPDate = "BPDate"
-    case bPTitle = "BPTitle"
-    case bPFile = "BPFile"
-  }
+struct BalPatrikaModel: Codable, Identifiable {
+    let id = UUID()
+    let bPID: Int
+    let bPDate: String
+    let bPTitle: String
+    let bPFile: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case bPID = "BPId"
+        case bPDate = "BPDate"
+        case bPTitle = "BPTitle"
+        case bPFile = "BPFile"
+    }
 }
 

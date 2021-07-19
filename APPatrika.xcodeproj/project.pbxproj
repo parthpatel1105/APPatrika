@@ -35,6 +35,10 @@
 		B22225E126A0AECC004CBC94 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225E026A0AECC004CBC94 /* LoadingView.swift */; };
 		B22225E426A0D89A004CBC94 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225E326A0D89A004CBC94 /* ImageLoader.swift */; };
 		B22225E626A23388004CBC94 /* BalPatrikaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225E526A23387004CBC94 /* BalPatrikaModel.swift */; };
+		B23E630326A343570076071E /* BalPatrikaListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E630226A343570076071E /* BalPatrikaListCell.swift */; };
+		B23E630526A3A2A00076071E /* BalPatrikaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */; };
+		B23E634326A4D49F0076071E /* PDFDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E634226A4D49F0076071E /* PDFDownloader.swift */; };
+		B28B532926A5BB6500841CBF /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B532826A5BB6500841CBF /* FileManager+Extension.swift */; };
 		B2D20F41269D1FA000F0E6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */; };
 		B2D20F43269D1FBC00F0E6F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */; };
 		B2EE3B90269CF777001B9BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EE3B8F269CF777001B9BA6 /* Assets.xcassets */; };
@@ -100,6 +104,10 @@
 		B22225E026A0AECC004CBC94 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B22225E326A0D89A004CBC94 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B22225E526A23387004CBC94 /* BalPatrikaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaModel.swift; sourceTree = "<group>"; };
+		B23E630226A343570076071E /* BalPatrikaListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaListCell.swift; sourceTree = "<group>"; };
+		B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaViewModel.swift; sourceTree = "<group>"; };
+		B23E634226A4D49F0076071E /* PDFDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDownloader.swift; sourceTree = "<group>"; };
+		B28B532826A5BB6500841CBF /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2EE3B88269CF776001B9BA6 /* APPatrika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPatrika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +171,7 @@
 		B202B8EC269F70BF001F8A04 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				B23E634126A4D4950076071E /* PDFDownloader */,
 				B22225DA26A09985004CBC94 /* Alert */,
 				B202B917269F79EA001F8A04 /* Extension */,
 				B22225D926A0996A004CBC94 /* Configuration */,
@@ -202,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				B202B918269F79F3001F8A04 /* LogFiles.swift */,
+				B28B532826A5BB6500841CBF /* FileManager+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -239,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				B2EE3BBB269CF908001B9BA6 /* BalPatrikaView.swift */,
+				B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */,
 			);
 			path = BalPatrikaView;
 			sourceTree = "<group>";
@@ -301,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				B202B91A269F7E1C001F8A04 /* ArticleListCell.swift */,
+				B23E630226A343570076071E /* BalPatrikaListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -319,6 +331,14 @@
 				B22225E326A0D89A004CBC94 /* ImageLoader.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		B23E634126A4D4950076071E /* PDFDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				B23E634226A4D49F0076071E /* PDFDownloader.swift */,
+			);
+			path = PDFDownloader;
 			sourceTree = "<group>";
 		};
 		B2EE3B7F269CF776001B9BA6 = {
@@ -631,11 +651,14 @@
 				B202B8E6269F3D08001F8A04 /* CombineNetworkM.swift in Sources */,
 				B22225E626A23388004CBC94 /* BalPatrikaModel.swift in Sources */,
 				B2EE3BBC269CF908001B9BA6 /* BalPatrikaView.swift in Sources */,
+				B23E634326A4D49F0076071E /* PDFDownloader.swift in Sources */,
+				B23E630326A343570076071E /* BalPatrikaListCell.swift in Sources */,
 				B202B907269F72F2001F8A04 /* MultipartFormData.swift in Sources */,
 				B2D20F41269D1FA000F0E6F2 /* AppDelegate.swift in Sources */,
 				B202B912269F7380001F8A04 /* ArticlesModel.swift in Sources */,
 				B2EE3BC2269CFA48001B9BA6 /* ArticleListView.swift in Sources */,
 				B202B8F0269F70E7001F8A04 /* CopyDeck.swift in Sources */,
+				B28B532926A5BB6500841CBF /* FileManager+Extension.swift in Sources */,
 				B2D20F43269D1FBC00F0E6F2 /* SceneDelegate.swift in Sources */,
 				B202B910269F72F2001F8A04 /* NSMutableData+.swift in Sources */,
 				B2EE3BBA269CF8F8001B9BA6 /* OutReachView.swift in Sources */,
@@ -645,6 +668,7 @@
 				B202B909269F72F2001F8A04 /* ParameterEncoding.swift in Sources */,
 				B202B91B269F7E1C001F8A04 /* ArticleListCell.swift in Sources */,
 				B202B916269F78CB001F8A04 /* ArticleListViewModel.swift in Sources */,
+				B23E630526A3A2A00076071E /* BalPatrikaViewModel.swift in Sources */,
 				B22225E126A0AECC004CBC94 /* LoadingView.swift in Sources */,
 				B22225DC26A09997004CBC94 /* Alert.swift in Sources */,
 				B202B908269F72F2001F8A04 /* Encodable+.swift in Sources */,

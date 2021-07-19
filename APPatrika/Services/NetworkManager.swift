@@ -9,6 +9,7 @@ import UIKit
 
 enum APIEndpoint {
     case getArticle
+    case getBalPatrika
     case getImage(imagePath: String)
 }
 
@@ -23,6 +24,8 @@ extension APIEndpoint: API {
         switch self {
         case .getArticle:
             return URL(string: configuration.baseApiUrl)!
+        case .getBalPatrika:
+            return URL(string: configuration.baseApiUrl)!
         case .getImage( _):
         return URL(string: configuration.imageURL)!
         }
@@ -34,6 +37,8 @@ extension APIEndpoint: API {
         switch self {
         case .getArticle:
             return "patrika_get_issues.php"
+        case .getBalPatrika:
+            return "balpatrika_get_issues.php"
         case .getImage(let imagePath):
             return "IssueImages/\(imagePath)"
         }
@@ -41,7 +46,7 @@ extension APIEndpoint: API {
     // HTTP method of endpoint
     var method: Method {
         switch self {
-        case .getArticle, .getImage:
+        case .getArticle, .getImage, .getBalPatrika:
             return .get
         }
     }
@@ -53,7 +58,7 @@ extension APIEndpoint: API {
     
     var task: Task {
         switch self {
-        case .getArticle, .getImage:
+        case .getArticle, .getImage, .getBalPatrika:
             return .requestPlain
         }
     }
@@ -105,7 +110,7 @@ class NetworkManager {
                 Logger.log("Get success response")
                 completed(.success(responseObject))
             } catch {
-                print("decode error = \(error)")
+                Logger.log("decode error = \(error)")
                 completed(.failure(.invalidData))
             }
         }

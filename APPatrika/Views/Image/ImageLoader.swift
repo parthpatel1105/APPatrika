@@ -22,13 +22,13 @@ final class ImageLoader: ObservableObject {
     }
 }
 
-struct RemoteImage: View {
-    var image: Image?
-    
-    var body: some View {
-        image?.resizable() ?? Image("").resizable()
-    }
-}
+//struct RemoteImage: View {
+//    var image: Image?
+//    
+//    var body: some View {
+//        image?.resizable() ?? Image("").resizable()
+//    }
+//}
 
 struct ArticleRemoteImage: View {
     @StateObject var imageLoader = ImageLoader()

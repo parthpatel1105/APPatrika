@@ -45,8 +45,8 @@ extension EnvironmentConfiguration {
         return config["ImageURL"] as! String
     }
     
-    var logLevel : String {
-        return config["LogLevel"] as! String
+    var balPatrikaDownloadURL : String {
+        return config["BalPatrikaDownloadURL"] as! String
     }
     
     var googleClientId: String {
@@ -66,7 +66,7 @@ extension EnvironmentConfiguration {
 protocol NSScreencastConfiguration {
     var baseApiUrl: String { get }
     var imageURL: String { get }
-    var logLevel: String { get }
+    var balPatrikaDownloadURL: String { get }
     var googleClientId: String { get }
     var oneSignalAppId: String { get }
     var appCenterKey: String { get }

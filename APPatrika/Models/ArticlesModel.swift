@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 struct ArticlesModel: Codable, Identifiable {
   let id: Int
   let issueName: String

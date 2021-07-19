@@ -8,6 +8,8 @@
 		<string>http://168.63.234.13/dbphp</string>
 		<key>ImageURL</key>
 		<string>http://168.63.234.13/apppatrika/App_Storage</string>
+		<key>BalPatrikaDownloadURL</key>
+		<string>http://168.63.234.13/apppatrika/App_Storage//Balpatrika/</string>
 	</dict>
 	<key>Debug</key>
 	<dict>
@@ -15,6 +17,8 @@
 		<string>http://168.63.234.13/dbphp</string>
 		<key>ImageURL</key>
 		<string>http://168.63.234.13/apppatrika/App_Storage</string>
+		<key>BalPatrikaDownloadURL</key>
+		<string>http://168.63.234.13/apppatrika/App_Storage//Balpatrika/</string>
 	</dict>
 </dict>
 </plist>
