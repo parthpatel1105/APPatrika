@@ -12,6 +12,7 @@ final class BalPatrikaViewModel: ObservableObject {
     @Published var balPatrikas: [BalPatrikaModel] = []
     @Published var alertType: AlertType? = nil
     @Published var isLoading = false
+    lazy var fileManager = FileManager()
     
     func getBalPatrika() {
         isLoading = true
@@ -31,6 +32,8 @@ final class BalPatrikaViewModel: ObservableObject {
         }
     }
     
+    
+    // MARK: - HandleAPI Errors
     private func showError(error: ErrorMessage) {
         switch error {
         case .invalidResponse:

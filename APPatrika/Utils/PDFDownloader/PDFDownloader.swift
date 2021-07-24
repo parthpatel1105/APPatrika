@@ -6,15 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
 
 class PDFDownloader: NSObject , ObservableObject {
     let fileManager = FileManager()
     @Published var progress = Float(0)
     @Published var progressText = "0%"
     @Published var isShowProgressView: Bool = false
-    
+    private var filePath: String?
     var downloadTask: URLSessionDownloadTask?
 }
+
 
 extension PDFDownloader {
     
@@ -24,17 +26,20 @@ extension PDFDownloader {
     
     var downloadsSession : URLSession {
         get {
-            let config = URLSessionConfiguration.background(withIdentifier: "background")
+            //let config = URLSessionConfiguration.background(withIdentifier: "background")
+            let config = URLSessionConfiguration.background(withIdentifier: self.filePath!)
             let queue = OperationQueue()
             return URLSession(configuration: config, delegate: self, delegateQueue: queue)
         }
     }
     
-    func startDownload(filePath: String) {
+    func startDownload(filePath: String, folderName: String) {
+        fileManager.createPDFFilesFolder(itemType: .balPatrika, subFolder: folderName)
+        self.filePath = filePath
         let urlString = configuration.balPatrikaDownloadURL + filePath
         guard let url = URL(string: urlString) else {return}
         self.downloadTask = downloadsSession.downloadTask(with: url)
-        self.downloadTask?.taskDescription = filePath
+        self.downloadTask?.taskDescription = "\(folderName)/\(filePath)"
         self.downloadTask?.resume()
         self.isShowProgressView = true
     }

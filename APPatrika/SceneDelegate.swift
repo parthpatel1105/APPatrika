@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        fileManager.createArticleFolder(itemType: .balPatrika)
-        fileManager.createArticleFolder(itemType: .article)
+        fileManager.createPDFFilesFolder(itemType: .balPatrika)
+        fileManager.createPDFFilesFolder(itemType: .article)
 //        let pathURL = fileManager.balPatrikaDirPath.appendingPathComponent("2020-11-05-11.pdf")
 //        print(pathURL)
         

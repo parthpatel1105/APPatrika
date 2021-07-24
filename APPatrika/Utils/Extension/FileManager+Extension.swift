@@ -31,13 +31,16 @@ extension FileManager {
     }
     
     
-    func createArticleFolder(itemType: SaveDocumentItems) {
-        if let pathURL = URL(string: itemType == .article ? self.articleDirPath.path : self.balPatrikaDirPath.path) {
+    func createPDFFilesFolder(itemType: SaveDocumentItems, subFolder: String? = nil) {
+        if var pathURL = URL(string: itemType == .article ? self.articleDirPath.path : self.balPatrikaDirPath.path) {
+            if let subFolder = subFolder {
+                pathURL = pathURL.appendingPathComponent(subFolder)
+            }
             if !FileManager.default.fileExists(atPath: pathURL.path) {
                 do {
                     try FileManager.default.createDirectory(atPath: pathURL.path, withIntermediateDirectories: true, attributes: nil)
                 } catch {
-                    Logger.log("File write error = \(error.localizedDescription)")
+                    Logger.log("Folder create error = \(error.localizedDescription)")
                 }
             }
         }
@@ -67,6 +70,12 @@ extension FileManager {
         }
         
         return false
+    }
+    
+    func getSavedFileURL(itemType: SaveDocumentItems, fileName: String) -> URL {
+        var filePath = itemType == .article ? self.articleDirPath : self.balPatrikaDirPath
+        filePath = filePath.appendingPathComponent(fileName)
+        return filePath
     }
     
     //    func saveDocument(contents:String, docName:String, completion: ((Error?) -> Void)? = nil) {

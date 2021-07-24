@@ -39,6 +39,7 @@
 		B23E630526A3A2A00076071E /* BalPatrikaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */; };
 		B23E634326A4D49F0076071E /* PDFDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E634226A4D49F0076071E /* PDFDownloader.swift */; };
 		B28B532926A5BB6500841CBF /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B532826A5BB6500841CBF /* FileManager+Extension.swift */; };
+		B28B532B26A5F1F200841CBF /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B532A26A5F1F100841CBF /* PDFKitView.swift */; };
 		B2D20F41269D1FA000F0E6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */; };
 		B2D20F43269D1FBC00F0E6F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */; };
 		B2EE3B90269CF777001B9BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EE3B8F269CF777001B9BA6 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		B2EE3BBE269CF92D001B9BA6 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE3BBD269CF92D001B9BA6 /* HistoryView.swift */; };
 		B2EE3BC0269CF93C001B9BA6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE3BBF269CF93C001B9BA6 /* InfoView.swift */; };
 		B2EE3BC2269CFA48001B9BA6 /* ArticleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2EE3BC1269CFA48001B9BA6 /* ArticleListView.swift */; };
+		B2F259C426AB73940076EA33 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F259C326AB73940076EA33 /* HistoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,7 @@
 		B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaViewModel.swift; sourceTree = "<group>"; };
 		B23E634226A4D49F0076071E /* PDFDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDownloader.swift; sourceTree = "<group>"; };
 		B28B532826A5BB6500841CBF /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		B28B532A26A5F1F100841CBF /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
 		B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2EE3B88269CF776001B9BA6 /* APPatrika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPatrika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +129,7 @@
 		B2EE3BBD269CF92D001B9BA6 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		B2EE3BBF269CF93C001B9BA6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		B2EE3BC1269CFA48001B9BA6 /* ArticleListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListView.swift; sourceTree = "<group>"; };
+		B2F259C326AB73940076EA33 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		C1BBACCEFC8CC1D8D6F27201 /* Pods-APPatrika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrika.release.xcconfig"; path = "Target Support Files/Pods-APPatrika/Pods-APPatrika.release.xcconfig"; sourceTree = "<group>"; };
 		CBA2958B0D31CC59A1DC4A1F /* Pods-APPatrika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrika.debug.xcconfig"; path = "Target Support Files/Pods-APPatrika/Pods-APPatrika.debug.xcconfig"; sourceTree = "<group>"; };
 		E3639203BC6E333F5CAD5C38 /* Pods-APPatrikaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-APPatrikaTests.debug.xcconfig"; path = "Target Support Files/Pods-APPatrikaTests/Pods-APPatrikaTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				B2EE3BBD269CF92D001B9BA6 /* HistoryView.swift */,
+				B2F259C326AB73940076EA33 /* HistoryViewModel.swift */,
 			);
 			path = HistoryView;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				B22225E026A0AECC004CBC94 /* LoadingView.swift */,
+				B28B532A26A5F1F100841CBF /* PDFKitView.swift */,
 			);
 			path = "UIKit Components";
 			sourceTree = "<group>";
@@ -642,9 +648,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B202B90C269F72F2001F8A04 /* API.swift in Sources */,
+				B28B532B26A5F1F200841CBF /* PDFKitView.swift in Sources */,
 				B202B90A269F72F2001F8A04 /* Method.swift in Sources */,
 				B2EE3BC0269CF93C001B9BA6 /* InfoView.swift in Sources */,
 				B2EE3BB7269CF895001B9BA6 /* CustomTabView.swift in Sources */,
+				B2F259C426AB73940076EA33 /* HistoryViewModel.swift in Sources */,
 				B202B8EE269F70CC001F8A04 /* EnvironmentConfiguration.swift in Sources */,
 				B202B90B269F72F2001F8A04 /* URLComponents+.swift in Sources */,
 				B202B919269F79F4001F8A04 /* LogFiles.swift in Sources */,

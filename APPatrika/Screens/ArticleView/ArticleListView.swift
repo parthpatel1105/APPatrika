@@ -17,6 +17,7 @@ struct ArticleListView: View {
                 List(viewModel.articles) { article in
                    ArticleListCell(article: article)
                 }
+                .listStyle(PlainListStyle())
                 .navigationBarTitle("Patrika")
                 .navigationBarItems(
                     trailing:
