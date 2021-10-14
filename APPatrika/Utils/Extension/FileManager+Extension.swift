@@ -65,7 +65,7 @@ extension FileManager {
         filePath = filePath.appendingPathComponent(fileName)
         
         if self.fileExists(atPath: filePath.path) {
-            Logger.log("File exist")
+            Logger.log("File exist at path = \(filePath.path)")
             return true
         }
         
@@ -78,15 +78,15 @@ extension FileManager {
         return filePath
     }
     
-    //    func saveDocument(contents:String, docName:String, completion: ((Error?) -> Void)? = nil) {
-    //        let url = urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(docName)
-    //        do {
-    //            try contents.write(to: url, atomically: true, encoding:.utf8)
-    //        } catch {
-    //            print("Could not save file to directory: \(error.localizedDescription)")
-    //            completion!(error)
-    //        }
-    //    }
+    func geSavedBalPatrikaFolders() -> [String]? {
+        do {
+            let directoryContents = try contentsOfDirectory(at: self.balPatrikaDirPath, includingPropertiesForKeys: nil)
+            return directoryContents.map { $0.lastPathComponent }
+        } catch {
+            print(error)
+            return nil
+        }
+    }
     
     func readDocument(docName: String, completion: (String?, Error?) -> Void) {
         let url = urls(for: .documentDirectory, in: .userDomainMask).first!.appendingPathComponent(docName)

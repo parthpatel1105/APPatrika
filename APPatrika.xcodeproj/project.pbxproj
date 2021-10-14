@@ -31,15 +31,21 @@
 		B202B916269F78CB001F8A04 /* ArticleListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B202B915269F78CB001F8A04 /* ArticleListViewModel.swift */; };
 		B202B919269F79F4001F8A04 /* LogFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B202B918269F79F3001F8A04 /* LogFiles.swift */; };
 		B202B91B269F7E1C001F8A04 /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B202B91A269F7E1C001F8A04 /* ArticleListCell.swift */; };
+		B21226F526FEAE1500FBE740 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21226F426FEAE1500FBE740 /* HistoryCell.swift */; };
 		B22225DC26A09997004CBC94 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225DB26A09997004CBC94 /* Alert.swift */; };
 		B22225E126A0AECC004CBC94 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225E026A0AECC004CBC94 /* LoadingView.swift */; };
 		B22225E426A0D89A004CBC94 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225E326A0D89A004CBC94 /* ImageLoader.swift */; };
 		B22225E626A23388004CBC94 /* BalPatrikaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22225E526A23387004CBC94 /* BalPatrikaModel.swift */; };
+		B237555926D707A900E129B5 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237555826D707A900E129B5 /* FileManager.swift */; };
+		B237555B26D857CD00E129B5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B237555A26D857CD00E129B5 /* String+Extension.swift */; };
 		B23E630326A343570076071E /* BalPatrikaListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E630226A343570076071E /* BalPatrikaListCell.swift */; };
 		B23E630526A3A2A00076071E /* BalPatrikaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */; };
 		B23E634326A4D49F0076071E /* PDFDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23E634226A4D49F0076071E /* PDFDownloader.swift */; };
 		B28B532926A5BB6500841CBF /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B532826A5BB6500841CBF /* FileManager+Extension.swift */; };
 		B28B532B26A5F1F200841CBF /* PDFKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B532A26A5F1F100841CBF /* PDFKitView.swift */; };
+		B29635C227051BCA00DBBFC7 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29635C127051BCA00DBBFC7 /* ArticleDetailView.swift */; };
+		B29635C427051BF500DBBFC7 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29635C327051BF500DBBFC7 /* ArticleDetailViewModel.swift */; };
+		B29635C62705446100DBBFC7 /* IssuesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29635C52705446100DBBFC7 /* IssuesModel.swift */; };
 		B2D20F41269D1FA000F0E6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */; };
 		B2D20F43269D1FBC00F0E6F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */; };
 		B2EE3B90269CF777001B9BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2EE3B8F269CF777001B9BA6 /* Assets.xcassets */; };
@@ -102,15 +108,21 @@
 		B202B915269F78CB001F8A04 /* ArticleListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewModel.swift; sourceTree = "<group>"; };
 		B202B918269F79F3001F8A04 /* LogFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFiles.swift; sourceTree = "<group>"; };
 		B202B91A269F7E1C001F8A04 /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
+		B21226F426FEAE1500FBE740 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		B22225DB26A09997004CBC94 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B22225E026A0AECC004CBC94 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		B22225E326A0D89A004CBC94 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		B22225E526A23387004CBC94 /* BalPatrikaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaModel.swift; sourceTree = "<group>"; };
+		B237555826D707A900E129B5 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		B237555A26D857CD00E129B5 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B23E630226A343570076071E /* BalPatrikaListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaListCell.swift; sourceTree = "<group>"; };
 		B23E630426A3A2A00076071E /* BalPatrikaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalPatrikaViewModel.swift; sourceTree = "<group>"; };
 		B23E634226A4D49F0076071E /* PDFDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDownloader.swift; sourceTree = "<group>"; };
 		B28B532826A5BB6500841CBF /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		B28B532A26A5F1F100841CBF /* PDFKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFKitView.swift; sourceTree = "<group>"; };
+		B29635C127051BCA00DBBFC7 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		B29635C327051BF500DBBFC7 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
+		B29635C52705446100DBBFC7 /* IssuesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesModel.swift; sourceTree = "<group>"; };
 		B2D20F40269D1FA000F0E6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D20F42269D1FBC00F0E6F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2EE3B88269CF776001B9BA6 /* APPatrika.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPatrika.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +180,7 @@
 			children = (
 				B202B911269F7380001F8A04 /* ArticlesModel.swift */,
 				B22225E526A23387004CBC94 /* BalPatrikaModel.swift */,
+				B29635C52705446100DBBFC7 /* IssuesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -216,6 +229,8 @@
 			children = (
 				B202B918269F79F3001F8A04 /* LogFiles.swift */,
 				B28B532826A5BB6500841CBF /* FileManager+Extension.swift */,
+				B237555826D707A900E129B5 /* FileManager.swift */,
+				B237555A26D857CD00E129B5 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -223,6 +238,7 @@
 		B22225D226A08B81004CBC94 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				B29635C027051BA700DBBFC7 /* Article DetailView */,
 				B22225D326A08B89004CBC94 /* ArticleView */,
 				B22225D726A08BCB004CBC94 /* InfoView */,
 				B22225D626A08BBF004CBC94 /* HistoryView */,
@@ -318,6 +334,7 @@
 			children = (
 				B202B91A269F7E1C001F8A04 /* ArticleListCell.swift */,
 				B23E630226A343570076071E /* BalPatrikaListCell.swift */,
+				B21226F426FEAE1500FBE740 /* HistoryCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -345,6 +362,15 @@
 				B23E634226A4D49F0076071E /* PDFDownloader.swift */,
 			);
 			path = PDFDownloader;
+			sourceTree = "<group>";
+		};
+		B29635C027051BA700DBBFC7 /* Article DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				B29635C127051BCA00DBBFC7 /* ArticleDetailView.swift */,
+				B29635C327051BF500DBBFC7 /* ArticleDetailViewModel.swift */,
+			);
+			path = "Article DetailView";
 			sourceTree = "<group>";
 		};
 		B2EE3B7F269CF776001B9BA6 = {
@@ -655,6 +681,7 @@
 				B2F259C426AB73940076EA33 /* HistoryViewModel.swift in Sources */,
 				B202B8EE269F70CC001F8A04 /* EnvironmentConfiguration.swift in Sources */,
 				B202B90B269F72F2001F8A04 /* URLComponents+.swift in Sources */,
+				B237555B26D857CD00E129B5 /* String+Extension.swift in Sources */,
 				B202B919269F79F4001F8A04 /* LogFiles.swift in Sources */,
 				B202B8E6269F3D08001F8A04 /* CombineNetworkM.swift in Sources */,
 				B22225E626A23388004CBC94 /* BalPatrikaModel.swift in Sources */,
@@ -668,8 +695,12 @@
 				B202B8F0269F70E7001F8A04 /* CopyDeck.swift in Sources */,
 				B28B532926A5BB6500841CBF /* FileManager+Extension.swift in Sources */,
 				B2D20F43269D1FBC00F0E6F2 /* SceneDelegate.swift in Sources */,
+				B237555926D707A900E129B5 /* FileManager.swift in Sources */,
 				B202B910269F72F2001F8A04 /* NSMutableData+.swift in Sources */,
+				B29635C227051BCA00DBBFC7 /* ArticleDetailView.swift in Sources */,
+				B29635C427051BF500DBBFC7 /* ArticleDetailViewModel.swift in Sources */,
 				B2EE3BBA269CF8F8001B9BA6 /* OutReachView.swift in Sources */,
+				B21226F526FEAE1500FBE740 /* HistoryCell.swift in Sources */,
 				B202B904269F72F2001F8A04 /* NetworkManager.swift in Sources */,
 				B2EE3BBE269CF92D001B9BA6 /* HistoryView.swift in Sources */,
 				B202B90E269F72F2001F8A04 /* Task.swift in Sources */,
@@ -681,6 +712,7 @@
 				B22225DC26A09997004CBC94 /* Alert.swift in Sources */,
 				B202B908269F72F2001F8A04 /* Encodable+.swift in Sources */,
 				B202B914269F76CE001F8A04 /* ErrorMessage.swift in Sources */,
+				B29635C62705446100DBBFC7 /* IssuesModel.swift in Sources */,
 				B22225E426A0D89A004CBC94 /* ImageLoader.swift in Sources */,
 				B202B90D269F72F2001F8A04 /* NetworkLogger.swift in Sources */,
 				B202B905269F72F2001F8A04 /* NetManager.swift in Sources */,

@@ -15,18 +15,13 @@ struct ArticleListView: View {
         ZStack {
             NavigationView {
                 List(viewModel.articles) { article in
-                   ArticleListCell(article: article)
+                    NavigationLink(destination: ArticleDetailView(issueId: article.id, articleTitle: article.issueName)) {
+                        ArticleListCell(article: article)
+                    }
                 }
                 .listStyle(PlainListStyle())
                 .navigationBarTitle("Patrika")
-                .navigationBarItems(
-                    trailing:
-                        Button(action: {
-                            viewModel.getArticles()
-                        }) {
-                            Image(systemName: "arrow.clockwise")
-                        }
-                )
+                .navigationBarItems(trailing: refreshButton)
             }
             .onAppear {
                 viewModel.getArticles()
@@ -38,6 +33,14 @@ struct ArticleListView: View {
         }
         .alert(item: $viewModel.alertType) { $0.alert }
         
+    }
+    
+    private var refreshButton: some View {
+        return AnyView(Button(action: reloadView) { Image(systemName: "arrow.clockwise") })
+    }
+    
+    private func reloadView() {
+        viewModel.getArticles()
     }
 }
 

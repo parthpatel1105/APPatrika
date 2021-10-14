@@ -11,6 +11,7 @@ enum APIEndpoint {
     case getArticle
     case getBalPatrika
     case getImage(imagePath: String)
+    case getIssue(issueId: Int)
 }
 
 extension APIEndpoint: API {
@@ -27,7 +28,9 @@ extension APIEndpoint: API {
         case .getBalPatrika:
             return URL(string: configuration.baseApiUrl)!
         case .getImage( _):
-        return URL(string: configuration.imageURL)!
+            return URL(string: configuration.imageURL)!
+        case .getIssue( _):
+            return URL(string: configuration.baseApiUrl)!
         }
         
     }
@@ -41,12 +44,14 @@ extension APIEndpoint: API {
             return "balpatrika_get_issues.php"
         case .getImage(let imagePath):
             return "IssueImages/\(imagePath)"
+        case .getIssue(_):
+            return "patrika_get_article_by_issueid.php"
         }
     }
     // HTTP method of endpoint
     var method: Method {
         switch self {
-        case .getArticle, .getImage, .getBalPatrika:
+        case .getArticle, .getImage, .getBalPatrika, .getIssue:
             return .get
         }
     }
@@ -60,6 +65,8 @@ extension APIEndpoint: API {
         switch self {
         case .getArticle, .getImage, .getBalPatrika:
             return .requestPlain
+        case .getIssue(let issueId):
+            return  .requestParameters(parameters: ["issueid":issueId], encoding: .URLEncoded)
         }
     }
     

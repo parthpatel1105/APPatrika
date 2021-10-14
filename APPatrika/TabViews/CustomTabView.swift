@@ -7,56 +7,65 @@
 
 import SwiftUI
 
+enum Tab {
+    case patrika
+    case balPatrika
+    case history
+    case info
+}
+
+class TabController: ObservableObject {
+    @Published var activeTab = Tab.patrika
+    
+    func open(_ tab: Tab) {
+        activeTab = tab
+    }
+}
+
 struct CustomTabView: View {
     
     // MARK: - Properties
-    
+    @StateObject private var tabController = TabController()
     @Environment(\.colorScheme) var colorScheme
     
     // MARK: - Body
     var body: some View {
-        TabView {
+        TabView(selection: $tabController.activeTab) {
             //1
             ArticleListView()
             .tabItem {
                 Text("Patrika")
                 Image(systemName: "book")
             }
-            .tag(0)
+            .tag(Tab.patrika)
             
             //2
-            OutReachView()
-            .tabItem {
-                Text("Out Reach")
-                Image(systemName: "books.vertical")
-            }
-            .tag(1)
-            
-            //3
             BalPatrikaView()
             .tabItem {
                 Text("Bal Patrika")
                 Image(systemName: "person")
             }
-            .tag(2)
+            .tag(Tab.balPatrika)
             
-            //4
+            //3
             HistoryView()
             .tabItem {
                 Text("History")
                 Image(systemName: "folder")
             }
-            .tag(3)
+            .tag(Tab.history)
             
-            //5
+            //4
             InfoView()
             .tabItem {
                 Text("Info")
                 Image(systemName: "info.circle")
             }
-            .tag(4)
+            .tag(Tab.info)
             
-        }.accentColor(colorScheme == .dark ? .white : .black)
+        }
+        .accentColor(colorScheme == .dark ? .white : .black)
+        .environmentObject(tabController)
     }
 }
 

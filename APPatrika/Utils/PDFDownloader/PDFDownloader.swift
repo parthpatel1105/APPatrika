@@ -9,12 +9,17 @@ import UIKit
 import SwiftUI
 
 class PDFDownloader: NSObject , ObservableObject {
-    let fileManager = FileManager()
+    let storage = AppFileStorage()
     @Published var progress = Float(0)
     @Published var progressText = "0%"
     @Published var isShowProgressView: Bool = false
+    @Published var isFinishDownload: Bool = false
     private var filePath: String?
     var downloadTask: URLSessionDownloadTask?
+    var directory: AppDirectories
+    init(directory: AppDirectories) {
+        self.directory = directory
+    }
 }
 
 
@@ -33,10 +38,16 @@ extension PDFDownloader {
         }
     }
     
-    func startDownload(filePath: String, folderName: String) {
-        fileManager.createPDFFilesFolder(itemType: .balPatrika, subFolder: folderName)
+    func startDownload(filePath: String, folderName: String, articleURL: String = "") {
+        storage.createFolder(forFolderName: folderName, to: directory)
         self.filePath = filePath
-        let urlString = configuration.balPatrikaDownloadURL + filePath
+        var urlString = ""
+        
+        if case .subDirectory(.balPatrika) = self.directory {
+            urlString = configuration.balPatrikaDownloadURL + filePath
+        } else {
+            urlString = articleURL
+        }
         guard let url = URL(string: urlString) else {return}
         self.downloadTask = downloadsSession.downloadTask(with: url)
         self.downloadTask?.taskDescription = "\(folderName)/\(filePath)"
@@ -44,12 +55,13 @@ extension PDFDownloader {
         self.isShowProgressView = true
     }
 }
-
+//http://168.63.234.13/dbphp/patrika_get_article_by_issueid.php?issueid=25071
+//http://168.63.234.13/dbphp/patrika_get_article_by_issueid.php?issueid=25072
 extension PDFDownloader: URLSessionDownloadDelegate {
     func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
         if let data = try? Data(contentsOf: location) {
             if let description = downloadTask.taskDescription {
-                fileManager.saveDocument(itemType: .balPatrika, contents: data, docName: description) { error in
+                storage.writePDFFile(to: self.directory, for: description, contents: data) { error in
                     DispatchQueue.main.async {
                         if let error = error {
                             //show alert
@@ -58,6 +70,9 @@ extension PDFDownloader: URLSessionDownloadDelegate {
                             //open pdf
                         }
                         self.isShowProgressView = false
+                        self.isFinishDownload = true
+                        self.progressText = "0%"
+                        self.progress = Float(0)
                     }
                     
                 }

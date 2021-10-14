@@ -11,20 +11,16 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let fileManager = FileManager()
-
+//    let fileManager = FileManager()
+    let storage = AppFileStorage()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-        // Create the SwiftUI view that provides the window contents.
+        storage.createFolder(to: .subDirectory(dir: .balPatrika))
+        storage.createFolder(to: .subDirectory(dir: .articles))
         
-        fileManager.createPDFFilesFolder(itemType: .balPatrika)
-        fileManager.createPDFFilesFolder(itemType: .article)
-//        let pathURL = fileManager.balPatrikaDirPath.appendingPathComponent("2020-11-05-11.pdf")
-//        print(pathURL)
-        
+//        fileManager.createPDFFilesFolder(itemType: .balPatrika)
+//        fileManager.createPDFFilesFolder(itemType: .article)
+//        print("doc path = \(FileManager().docDirPath)")
         let tabView = CustomTabView()
             .captionBackgroundColor(.yellow)
         let config = EnvironmentConfiguration()

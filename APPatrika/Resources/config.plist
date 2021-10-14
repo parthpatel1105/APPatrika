@@ -10,6 +10,8 @@
 		<string>http://168.63.234.13/apppatrika/App_Storage</string>
 		<key>BalPatrikaDownloadURL</key>
 		<string>http://168.63.234.13/apppatrika/App_Storage//Balpatrika/</string>
+		<key>IssueURL</key>
+		<string>http://168.63.234.13/dbphp/patrika_get_article_by_issueid.php</string>
 	</dict>
 	<key>Debug</key>
 	<dict>
@@ -19,6 +21,8 @@
 		<string>http://168.63.234.13/apppatrika/App_Storage</string>
 		<key>BalPatrikaDownloadURL</key>
 		<string>http://168.63.234.13/apppatrika/App_Storage//Balpatrika/</string>
+		<key>IssueURL</key>
+		<string>http://168.63.234.13/dbphp/patrika_get_article_by_issueid.php</string>
 	</dict>
 </dict>
 </plist>

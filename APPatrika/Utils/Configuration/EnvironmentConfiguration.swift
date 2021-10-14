@@ -49,6 +49,10 @@ extension EnvironmentConfiguration {
         return config["BalPatrikaDownloadURL"] as! String
     }
     
+    var issueURL : String {
+        return config["IssueURL"] as! String
+    }
+    
     var googleClientId: String {
         return config["GoogleClientId"] as! String
     }
@@ -67,6 +71,7 @@ protocol NSScreencastConfiguration {
     var baseApiUrl: String { get }
     var imageURL: String { get }
     var balPatrikaDownloadURL: String { get }
+    var issueURL: String { get }
     var googleClientId: String { get }
     var oneSignalAppId: String { get }
     var appCenterKey: String { get }

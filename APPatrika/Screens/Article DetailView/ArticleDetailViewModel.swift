@@ -1,28 +1,28 @@
 //
-//  BalPatrikaViewModel.swift
+//  ArticleDetailViewModel.swift
 //  APPatrika
 //
-//  Created by Parth Patel on 17/07/21.
+//  Created by Parth Patel on 29/09/21.
 //
 
-import Foundation
+import SwiftUI
 
-final class BalPatrikaViewModel: ObservableObject {
-    
-    @Published var balPatrikas: [BalPatrikaModel] = []
+final class ArticleDetailViewModel: ObservableObject {
+
+    @Published var issues: [IssuesModel] = []
     @Published var alertType: AlertType? = nil
     @Published var isLoading = false
     lazy var appFileStorage = AppFileStorage()
-    
-    func getBalPatrika() {
+
+    func getIssues(issueId: Int) {
         isLoading = true
-        NetworkManager.shared.fetchAPI(request: APIEndpoint.getBalPatrika.getURLRequest()) { [weak self] (result: Result<[BalPatrikaModel], ErrorMessage>) in
+        NetworkManager.shared.fetchAPI(request: APIEndpoint.getIssue(issueId: issueId).getURLRequest()) { [weak self] (result: Result<[IssuesModel], ErrorMessage>) in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.isLoading = false
                 switch result {
-                case .success(let balPatrikas):
-                    self.balPatrikas = balPatrikas
+                case .success(let issues):
+                    self.issues = issues                    
                 case .failure(let error):
                     Logger.log(error.localizedDescription)
                     self.showError(error: error)
@@ -32,8 +32,6 @@ final class BalPatrikaViewModel: ObservableObject {
         }
     }
     
-    
-    // MARK: - HandleAPI Errors
     private func showError(error: ErrorMessage) {
         switch error {
         case .invalidResponse:
