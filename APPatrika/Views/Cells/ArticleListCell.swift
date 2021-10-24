@@ -18,7 +18,7 @@ struct ArticleListCell: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(article.issueName)
-                    .font(.system(size: 20))
+                    .font(.system(size: 17))
                     .fontWeight(.regular)
                 Text(article.issueDate)
                     .font(.subheadline)

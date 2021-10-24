@@ -18,7 +18,7 @@ struct BalPatrikaListCell: View {
             
             VStack(alignment: .leading, spacing: 10) {
                 Text(balPatrika.bPTitle)
-                    .font(.system(size: 20))
+                    .font(.system(size: 17))
                     .fontWeight(.regular)
                 Text(balPatrika.bPDate)
                     .font(.subheadline)

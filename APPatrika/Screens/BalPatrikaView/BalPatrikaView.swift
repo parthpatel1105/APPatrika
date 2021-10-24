@@ -16,20 +16,25 @@ struct BalPatrikaView: View, StringInterpolation {
     var body: some View {
         ZStack {
             NavigationView {
-                List(viewModel.balPatrikas) { balPatrika in
-                    BalPatrikaListCell(balPatrika: balPatrika)
-                        .onTapGesture {
-                            let url = viewModel.appFileStorage.buildFullPath(forFileName: self.generateFilePath(firstPath: balPatrika.bPTitle, secondPath: balPatrika.bPFile), inDirectory: .subDirectory(dir: .balPatrika))
-                            self.openURL = url
-                            print("Open URL = \(String(describing: self.openURL))")
-
-                            if !viewModel.appFileStorage.exists(file: url) {
-                                self.dataModel.startDownload(filePath: balPatrika.bPFile, folderName: balPatrika.bPTitle)
-                            } else {
-                                Logger.log("File exist")
-                                dataModel.isFinishDownload = true
-                            }
-                        }
+                List {
+                    ForEach(viewModel.balPatrikas, content: row(balPatrika:))
+//                    ForEach(viewModel.balPatrikas) { balPatrika in
+//                        Button(action: {
+//                            let url = viewModel.appFileStorage.buildFullPath(forFileName: self.generateFilePath(firstPath: balPatrika.bPTitle, secondPath: balPatrika.bPFile), inDirectory: .subDirectory(dir: .balPatrika))
+//                            self.openURL = url
+//                            print("Open URL = \(String(describing: self.openURL))")
+//
+//                            if !viewModel.appFileStorage.exists(file: url) {
+//                                self.dataModel.startDownload(filePath: balPatrika.bPFile, folderName: balPatrika.bPTitle)
+//                            } else {
+//                                Logger.log("File exist")
+//                                dataModel.isFinishDownload = true
+//                            }
+//
+//                        }) {
+//                            BalPatrikaListCell(balPatrika: balPatrika)
+//                        }
+//                    }
                 }
                 .listStyle(PlainListStyle())
                 .navigationBarTitle("BalPatrika")
@@ -63,6 +68,26 @@ struct BalPatrikaView: View, StringInterpolation {
         .sheet(isPresented: $dataModel.isFinishDownload, content: {
             PDFKitView(url: self.$openURL)
         })
+    }
+    
+    @ViewBuilder
+    func row(balPatrika: BalPatrikaModel) -> some View {
+        Button(action: {
+            let url = viewModel.appFileStorage.buildFullPath(forFileName: self.generateFilePath(firstPath: balPatrika.bPTitle, secondPath: balPatrika.bPFile), inDirectory: .subDirectory(dir: .balPatrika))
+            self.openURL = url
+            print("Open URL = \(String(describing: self.openURL))")
+
+            if !viewModel.appFileStorage.exists(file: url) {
+                self.dataModel.startDownload(filePath: balPatrika.bPFile, folderName: balPatrika.bPTitle)
+            } else {
+                Logger.log("File exist")
+                dataModel.isFinishDownload = true
+            }
+
+        }) {
+            BalPatrikaListCell(balPatrika: balPatrika)
+        }
+
     }
    
 }

@@ -53,25 +53,43 @@ struct HistoryDisplayView: View {
     @Binding var selectedSegment: SubDirectories
     @Binding var isOpenPDF: Bool
     @Binding var openURL: URL?
-    var displayArray: [String] = ["1", "2", "3"]
     @ObservedObject var viewModel: HistoryViewModel
     @State private var editMode = EditMode.inactive
+    @State private var imageName: String = "chevron.right"
+    @State private var selectedIndexs = -1
     
     var body: some View {
         switch selectedSegment {
         case .articles:
-            List {
-                ForEach(viewModel.articles, id: \.self) { url in
-                    Button(action: {
-//                        if let urls = viewModel.appFileStorage.listDirectories(directory: url), urls.count > 0 {
-//                            self.openURL = urls[0]
-//                            self.isOpenPDF = true
-//                        }
-                    }) {
-                        Text(url.lastPathComponent)
+            List(viewModel.articles, id:\.self) { patrika in
+                Button(action: {
+                    viewModel.getDetailArticlesDirectories(for: .articles, fileName: patrika.lastPathComponent)
+                    if let index = viewModel.articles.firstIndex(where: { $0 == patrika }) {
+                        selectedIndexs = selectedIndexs == index ? -1 : index
+                        if selectedIndexs == index {
+                            imageName = "chevron.down"
+                        } else {
+                            imageName = "chevron.right"
+                        }
                     }
+                }, label: {
+                    ItemRow(isRowSelected: true, titleText: patrika.lastPathComponent, imageName: $imageName)
+                })
+                
+                if let index = viewModel.articles.firstIndex(where: { $0 == patrika }), index == selectedIndexs {
+                        Section {
+                            ForEach(viewModel.articlesDetails, id: \.self) { row in
+                                Button(action: {
+                                    self.openURL = row
+                                    self.isOpenPDF = true
+                                }) {
+                                    ItemRow(titleText: row.lastPathComponent, imageName: $imageName)
+                                }
+                            }
+                            .onDelete(perform: deleteArticles)
+                        }
+                        .padding(.leading, 20)
                 }
-                .onDelete(perform: deleteItems)
             }
             .listStyle(PlainListStyle())
             .navigationBarItems(trailing: EditButton())
@@ -86,9 +104,8 @@ struct HistoryDisplayView: View {
                             self.openURL = urls[0]
                             self.isOpenPDF = true
                         }
-                        
                     }) {
-                            Text(url.lastPathComponent)
+                        Text(url.lastPathComponent)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -101,11 +118,40 @@ struct HistoryDisplayView: View {
         }
     }
     
+    
     private func deleteItems(at offSet: IndexSet) {
         if let index = offSet.first, let isDeleted = viewModel.appFileStorage.deleteFile(at: viewModel.balPatrika[index]), isDeleted {
             viewModel.balPatrika.remove(atOffsets: offSet)
         }
         
+    }
+
+
+    private func deleteArticles(at offSet: IndexSet) {
+        if let index = offSet.first, let isDeleted = viewModel.appFileStorage.deleteFile(at: viewModel.articlesDetails[index]), isDeleted {
+            viewModel.articlesDetails.remove(atOffsets: offSet)
+        }
+    }
+}
+
+struct ItemRow: View {
+    
+    var isRowSelected: Bool = false
+    var titleText: String
+    @Binding var imageName: String
+    
+    var body: some View {
+        HStack {
+            if isRowSelected {
+                Text(self.titleText).bold()
+                Spacer()
+//                Image(systemName: imageName)
+//                    .font(.body)
+            } else {
+                Text(self.titleText)
+            }
+            
+        }
     }
 }
 
@@ -114,15 +160,53 @@ struct HistoryDisplayView: View {
 struct ItemsToolbar: ToolbarContent {
     let add: () -> Void
     let sort: () -> Void
-
+    
     
     var body: some ToolbarContent {
         ToolbarItem(placement: .primaryAction) {
             Button("Add", action: add)
         }
-
+        
         ToolbarItem(placement: .bottomBar) {
             Button("Sort", action: sort)
+        }
+    }
+}
+
+
+struct PlaceView: View {
+    let place: URL
+    @State private var testData = ["1", "2", "3"]
+    var body: some View {
+        HStack {
+            content
+            Spacer()
+        }
+        .contentShape(Rectangle()) // 3.
+    }
+    
+    private var content: some View {
+        VStack(alignment: .leading) {
+            Text(place.lastPathComponent).font(.headline)
+            Spacer()
+            VStack(alignment: .leading) {
+                List {
+                    ForEach(testData, id: \.self) { url in
+                        Button(action: {
+                            //viewModel.getDetailArticlesDirectories(for: .articles, fileName: url.lastPathComponent)
+                        }) {
+                            
+                            Text(url)
+                        }
+                    }
+                }
+                //                Text("Parth")
+                //                Text("place.city")
+                //                Text("place.street")
+                //                Text("place.zip")
+                //                Text("place.phoneNumber")
+            }
+            Spacer()
         }
     }
 }
